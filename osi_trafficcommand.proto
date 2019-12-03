@@ -53,5 +53,5 @@ message TrafficCommand
 //
 message TrafficAction
 {
-    
+
 }
