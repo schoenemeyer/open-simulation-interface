@@ -72,6 +72,10 @@ message SensorDetectionHeader
     // In general the detection function is called periodically and
     // \c #cycle_counter corresponds to the number of periods.
     //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // \endrules
+    //
     optional uint64 cycle_counter = 2;
 
     // Mounting position of the sensor (origin and orientation of the sensor
@@ -117,6 +121,10 @@ message SensorDetectionHeader
     // The current number of valid detections in the detections list.
     //
     // \note This value has to be set if the list contains invalid detections.
+    //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // \endrules
     //
     optional uint32 number_of_valid_detections = 6;
 
@@ -259,11 +267,20 @@ message RadarDetection
     // \note Use as confidence measure where a low value means less confidence
     // and a high value indicates strong confidence.
     //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // is_less_than_or_equal_to: 1
+    // \endrules
+    //
     optional double existence_probability = 1;
 
     // ID of the detected object this detection is associated to.
     //
     // \note ID = MAX(uint64) indicates no reference to an object.
+    //
+    // \rules
+    // refers_to: DetectedObject
+    // \endrules
     //
     optional Identifier object_id = 2;
 
@@ -280,11 +297,19 @@ message RadarDetection
     //
     // Unit: [m/s]
     //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // \endrules
+    //
     optional double radial_velocity = 5;
 
     // Root mean squared error of the object measured radial velocity.
     //
     // Unit: [m/s]
+    //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // \endrules
     //
     optional double radial_velocity_rmse = 6;
 
@@ -304,6 +329,11 @@ message RadarDetection
     // this detection.
     //
     // Range: [0.0, 1.0]
+    //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // is_less_than_or_equal_to: 1
+    // \endrules
     //
     optional double point_target_probability = 9;
 
@@ -354,11 +384,20 @@ message LidarDetection
     // \note Used as confidence measure where a low value means less confidence
     // and a high value indicates strong confidence.
     //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // is_less_than_or_equal_to: 1
+    // \endrules
+    //
     optional double existence_probability = 1;
 
     // ID of the detected object this detection is associated to.
     //
     // \note ID = MAX(uint64) indicates no reference to an object.
+    //
+    // \rules
+    // refers_to: DetectedObject
+    // \endrules
     //
     optional Identifier object_id = 2;
 
@@ -376,11 +415,19 @@ message LidarDetection
     //
     // Unit: [m]
     //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // \endrules
+    //
     optional double height = 5;
 
     // Root mean squared error of the object height.
     //
     // Unit: [m]
+    //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // \endrules
     //
     optional double height_rmse = 6;
 
@@ -388,12 +435,22 @@ message LidarDetection
     //
     // Unit: [%]
     //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // is_less_than_or_equal_to: 100
+    // \endrules
+    //
     optional double intensity = 7;
 
     // The free space probability in the range [0.0, 1.0] from the origin of the
     // sensor up to this detection, as given by the distance.
     //
     // Range: [0.0, 1.0]
+    //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // is_less_than_or_equal_to: 1
+    // \endrules
     //
     optional double free_space_probability = 8;
 
@@ -492,17 +549,30 @@ message UltrasonicDetection
     // \note Used as confidence measure where a low value means less confidence
     // and a high value indicates strong confidence.
     //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // is_less_than_or_equal_to: 1
+    // \endrules
+    //
     optional double existence_probability = 1;
 
     // ID of the detected object this detection is associated to.
     //
     // \note ID = MAX(uint64) indicates no reference to an object.
     //
+    // \rules
+    // refers_to: DetectedObject
+    // \endrules
+    //
     optional Identifier object_id = 2;
 
     // Measured distance (radius) of the detection.
     //
     // Unit: [m]
+    //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // \endrules
     //
     optional double distance = 3;
 }
@@ -532,11 +602,20 @@ message UltrasonicIndirectDetection
     // \note Used as confidence measure where a low value means less confidence
     // and a high value indicates strong confidence.
     //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // is_less_than_or_equal_to: 1
+    // \endrules
+    //
     optional double existence_probability = 1;
 
     // ID of the detected object this detection is associated to.
     //
     // \note ID = MAX(uint64) indicates no reference to an object.
+    //
+    // \rules
+    // refers_to: DetectedObject
+    // \endrules
     //
     optional Identifier object_id = 2;
 
@@ -572,6 +651,10 @@ message CameraDetectionSpecificHeader
     // refer.
     //
     // \note This value has to be set if the list contains invalid points.
+    //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // \endrules
     //
     optional uint32 number_of_valid_points = 1;
 }
@@ -615,11 +698,20 @@ message CameraDetection
     // \note Used as confidence measure where a low value means less confidence
     // and a high value indicates strong confidence.
     //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // is_less_than_or_equal_to: 1
+    // \endrules
+    //
     optional double existence_probability = 1;
 
     // ID of the detected object this detection is associated to.
     //
     // \note ID = MAX(uint64) indicates no reference to an object.
+    //
+    // \rules
+    // refers_to: DetectedObject
+    // \endrules
     //
     optional Identifier object_id = 2;
 
@@ -772,6 +864,11 @@ message CameraDetection
     //
     // Range: [0.0, 1.0]
     //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // is_less_than_or_equal_to: 1
+    // \endrules
+    //
     optional double shape_classification_probability = 27;
 
     // The dominant color of the shape.
@@ -781,6 +878,11 @@ message CameraDetection
     // The probability of the shape's color.
     //
     // Range: [0.0, 1.0]
+    //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // is_less_than_or_equal_to: 1
+    // \endrules
     //
     optional double color_probability = 29;
 
@@ -798,6 +900,10 @@ message CameraDetection
 
     // Number of points which defines the shape.
     // \c #image_shape_type may restrict the number of possible values.
+    //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // \endrules
     //
     optional uint32 number_of_points = 32;
 
@@ -940,6 +1046,11 @@ message CameraPoint
     //
     // \note Used as confidence measure where a low value means less confidence
     // and a high value indicates strong confidence.
+    //
+    // \rules
+    // is_greater_than_or_equal_to: 0
+    // is_less_than_or_equal_to: 1
+    // \endrules
     //
     optional double existence_probability = 1;
 

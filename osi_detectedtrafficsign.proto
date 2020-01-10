@@ -81,6 +81,11 @@ message DetectedTrafficSign
             //
             // Range: [0,1]
             //
+            // \rules
+            // is_less_than_or_equal_to: 1
+            // is_greater_than_or_equal_to: 0
+            // \endrules
+            //
             optional double probability = 1;
 
             // The classification of one main sign that defines this candidate.
@@ -205,6 +210,11 @@ message DetectedTrafficSign
             // DetectedItemHeader::existence_probability.
             //
             // Range: [0,1]
+            //
+            // \rules
+            // is_less_than_or_equal_to: 1
+            // is_greater_than_or_equal_to: 0
+            // \endrules
             //
             optional double probability = 1;
 
