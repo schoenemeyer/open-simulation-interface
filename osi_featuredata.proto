@@ -262,8 +262,6 @@ message RadarDetection
     // Existence probability of the detection not based on history. Value does
     // not depend on any past experience with similar detections.
     //
-    // Range: [0.0, 1.0]
-    //
     // \note Use as confidence measure where a low value means less confidence
     // and a high value indicates strong confidence.
     //
@@ -328,8 +326,6 @@ message RadarDetection
     // Describes the possibility whether more than one object may have led to
     // this detection.
     //
-    // Range: [0.0, 1.0]
-    //
     // \rules
     // is_greater_than_or_equal_to: 0
     // is_less_than_or_equal_to: 1
@@ -378,8 +374,6 @@ message LidarDetection
 {
     // Existence probability of the detection not based on history. Value does
     // not depend on any past experience with similar detections.
-    //
-    // Range: [0.0, 1.0]
     //
     // \note Used as confidence measure where a low value means less confidence
     // and a high value indicates strong confidence.
@@ -444,8 +438,6 @@ message LidarDetection
 
     // The free space probability in the range [0.0, 1.0] from the origin of the
     // sensor up to this detection, as given by the distance.
-    //
-    // Range: [0.0, 1.0]
     //
     // \rules
     // is_greater_than_or_equal_to: 0
@@ -544,8 +536,6 @@ message UltrasonicDetection
     // Existence probability of the detection not based on history. Value does
     // not depend on any past experience with similar detections.
     //
-    // Range: [0.0, 1.0]
-    //
     // \note Used as confidence measure where a low value means less confidence
     // and a high value indicates strong confidence.
     //
@@ -596,8 +586,6 @@ message UltrasonicIndirectDetection
 {
     // Existence probability of the detection not based on history. Value does
     // not depend on any past experience with similar detections.
-    //
-    // Range: [0.0, 1.0]
     //
     // \note Used as confidence measure where a low value means less confidence
     // and a high value indicates strong confidence.
@@ -692,8 +680,6 @@ message CameraDetection
 {
     // Existence probability of the detection not based on history. Value does
     // not depend on any past experience with similar detections.
-    //
-    // Range: [0.0, 1.0]
     //
     // \note Used as confidence measure where a low value means less confidence
     // and a high value indicates strong confidence.
@@ -862,8 +848,6 @@ message CameraDetection
     // This probability defines the mininimum probability for each selected
     // shape classification.
     //
-    // Range: [0.0, 1.0]
-    //
     // \rules
     // is_greater_than_or_equal_to: 0
     // is_less_than_or_equal_to: 1
@@ -876,8 +860,6 @@ message CameraDetection
     optional Color color = 28;
 
     // The probability of the shape's color.
-    //
-    // Range: [0.0, 1.0]
     //
     // \rules
     // is_greater_than_or_equal_to: 0
@@ -1041,8 +1023,6 @@ message CameraPoint
 {
     // Existence probability of the point not based on history. Value does
     // not depend on any past experience with similar points.
-    //
-    // Range: [0.0, 1.0]
     //
     // \note Used as confidence measure where a low value means less confidence
     // and a high value indicates strong confidence.

@@ -80,8 +80,6 @@ message Timestamp
 
     // The number of nanoseconds since the start of the last second.
     //
-    // Range: [0, 999.999.999]
-    //
     // Unit: [ns]
     //
     // \rules
