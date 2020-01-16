@@ -141,7 +141,7 @@ message SensorViewConfiguration
     // This determines the limit of the cone of interest of ground truth
     // that the simulation environment has to provide.
     //
-    // Unit: [m]
+    // Unit: m
     //
     // \rules
     // is_greater_than_or_equal_to: 0
@@ -405,7 +405,7 @@ message RadarSensorViewConfiguration
     // through frequency adjustments. For material and geometry interaction
     // purposes the frequency is also relevant.
     //
-    // Unit: [Hz]
+    // Unit: Hz
     //
     // \rules
     // is_greater_than_or_equal_to: 0
@@ -561,7 +561,7 @@ message LidarSensorViewConfiguration
     // through frequency adjustments. For material and geometry interaction
     // purposes the frequency is also relevant.
     //
-    // Unit: [Hz]
+    // Unit: Hz
     //
     // \rules
     // is_greater_than_or_equal_to: 0

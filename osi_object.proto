@@ -409,8 +409,6 @@ message MovingObject
 
         // Number of independent wheels.
         //
-        // Unit: []
-        //
         // \rules
         // is_greater_than_or_equal_to: 1
         // \endrules
