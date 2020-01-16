@@ -409,13 +409,10 @@ message MovingObject
 
         // Number of independent wheels.
         //
-<<<<<<< HEAD
         // \rules
         // is_greater_than_or_equal_to: 1
         // \endrules
         //
-=======
->>>>>>> origin/master
         optional uint32 number_wheels = 3;
 
         // The vector pointing from the bounding box center point (\c

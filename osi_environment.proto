@@ -69,15 +69,12 @@ message EnvironmentalConditions
     // temperature and atmospheric_pressure are known.
     //
     // Unit: %
-<<<<<<< HEAD
     //
     // \rules
     // is_greater_than_or_equal_to: 0
     // is_less_than_or_equal_to: 100
     // \endrules
     //
-=======
->>>>>>> origin/master
     optional double relative_humidity = 5;
 
     // Description of the precipitation.

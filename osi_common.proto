@@ -83,14 +83,11 @@ message Timestamp
     // Range: [0, 999.999.999]
     //
     // Unit: ns
-<<<<<<< HEAD
     //
     // \rules
     // is_greater_than_or_equal_to: 0
     // is_less_than_or_equal_to: 999999999
     // \endrules
-=======
->>>>>>> origin/master
     //
     optional uint32 nanos = 2;
 }

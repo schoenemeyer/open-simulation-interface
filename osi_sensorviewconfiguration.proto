@@ -142,14 +142,11 @@ message SensorViewConfiguration
     // that the simulation environment has to provide.
     //
     // Unit: m
-<<<<<<< HEAD
     //
     // \rules
     // is_greater_than_or_equal_to: 0
     // \endrules
     //
-=======
->>>>>>> origin/master
     optional double range = 7;
 
     // The update cycle time of the sensor model.
@@ -409,14 +406,11 @@ message RadarSensorViewConfiguration
     // purposes the frequency is also relevant.
     //
     // Unit: Hz
-<<<<<<< HEAD
     //
     // \rules
     // is_greater_than_or_equal_to: 0
     // \endrules
     //
-=======
->>>>>>> origin/master
     optional double emitter_frequency = 9;
 
     // This represents the TX antenna diagram
@@ -568,14 +562,11 @@ message LidarSensorViewConfiguration
     // purposes the frequency is also relevant.
     //
     // Unit: Hz
-<<<<<<< HEAD
     //
     // \rules
     // is_greater_than_or_equal_to: 0
     // \endrules
     //
-=======
->>>>>>> origin/master
     optional double emitter_frequency = 9;
 
     // Number of pixels in frame.
